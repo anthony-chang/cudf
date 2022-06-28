@@ -2502,7 +2502,7 @@ public class ColumnView implements AutoCloseable, BinaryOperable {
     assert type.equals(DType.STRING) : "column type must be a String";
     assert pattern != null : "pattern is null";
     assert pattern.length() > 0 : "empty pattern is not supported";
-    assert limit != 0 && limit != 1 : "split limit == 0 and limit == 1 are not supported";
+    // assert limit != 0 && limit != 1 : "split limit == 0 and limit == 1 are not supported";
     return new Table(stringSplit(this.getNativeView(), pattern, limit, splitByRegex));
   }
 
